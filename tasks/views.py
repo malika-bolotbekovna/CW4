@@ -1,7 +1,7 @@
 from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy
 from .models import Task, Category
-# from .forms import TaskForm
+from .forms import TaskForm
 
 class TaskListView(ListView):
     model = Task
@@ -30,11 +30,11 @@ class TaskDetailView(DetailView):
     context_object_name = 'task'
 
 
-# class TaskCreateView(CreateView):
-#     model = Task
-#     form_class = TaskForm
-#     template_name = 'tasks/task_form.html'
-#     success_url = reverse_lazy('task-list')
+class TaskCreateView(CreateView):
+    model = Task
+    form_class = TaskForm
+    template_name = 'tasks/task_form.html'
+    success_url = reverse_lazy('task-list')
 
 
 
