@@ -37,3 +37,4 @@ class TaskDetailView(DetailView):
 #     success_url = reverse_lazy('task-list')
 
 
+
